@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67166b6f569d03d46a90cd467cff63ca, type: 3}
+  m_Name: New Level Generator
+  m_EditorClassIdentifier: 
+  _enemies:
+  - {fileID: 2393708162239336633, guid: 5f1d752b1d396a541b749d1312b812f4, type: 3}
+  - {fileID: 7932506202165282796, guid: 8309308032074684a845b1c64be69c39, type: 3}
+  - {fileID: 2160129892226311106, guid: 99e695a8a729ffd48b81cb2a15ddebdc, type: 3}
+  _formations:
+  - {fileID: 11400000, guid: a8b49390d79a6ad4ab7f49aba79d90ec, type: 2}
+  - {fileID: 11400000, guid: 51f2a7177061c774b94d6c6cf955f856, type: 2}
+  - {fileID: 11400000, guid: 94cf831b481ddb84f85de7c7560deb9c, type: 2}
+  - {fileID: 11400000, guid: 60f04944e2728eb48bc1c1498c1130db, type: 2}
+  - {fileID: 11400000, guid: 6393d0bedb30299458109a3a7b98ef3d, type: 2}
