@@ -1,59 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1108680862999323971
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5685784658068331362}
-  - component: {fileID: 317103206778588509}
-  - component: {fileID: 6571395828709007790}
-  m_Layer: 0
-  m_Name: Capsule
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5685784658068331362
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1108680862999323971}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.26, y: 0.32, z: 0}
-  m_LocalScale: {x: 3.3084166, y: 3.2882688, z: 2}
-  m_Children: []
-  m_Father: {fileID: 4368566410713132605}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &317103206778588509
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1108680862999323971}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!136 &6571395828709007790
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1108680862999323971}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2160129892226311106
 GameObject:
   m_ObjectHideFlags: 0
@@ -67,6 +13,8 @@ GameObject:
   - component: {fileID: 5374442981540553606}
   - component: {fileID: 7309833982894021450}
   - component: {fileID: 1393000291160036980}
+  - component: {fileID: 3915578467107219021}
+  - component: {fileID: 8283244032158173564}
   m_Layer: 0
   m_Name: Deer Enemy
   m_TagString: Untagged
@@ -85,7 +33,6 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 5685784658068331362}
   - {fileID: 3419314615844842793}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -191,6 +138,34 @@ MonoBehaviour:
   - {fileID: 21300000, guid: dc2972b98c631464fba555137cd10404, type: 3}
   - {fileID: 21300000, guid: 608f6b5b0e417b644b3e9987ddc5c06b, type: 3}
   spriteRenderer: {fileID: 7309833982894021450}
+  CharacterState: 0
+--- !u!114 &3915578467107219021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2160129892226311106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bd0e464834cbc14397d1a592534a2c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorType: 1
+--- !u!136 &8283244032158173564
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2160129892226311106}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 2.0451295
+  m_Height: 8.9937
+  m_Direction: 1
+  m_Center: {x: -0.38619924, y: -0.11721897, z: 0.36271834}
 --- !u!1001 &1894629195116597118
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -204,7 +179,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3835039040029712983, guid: fb983cc9a800bc841ade6eaff8abf7d2, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3835039040029712983, guid: fb983cc9a800bc841ade6eaff8abf7d2, type: 3}
       propertyPath: m_LocalPosition.x
