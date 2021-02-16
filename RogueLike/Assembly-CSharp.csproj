@@ -56,17 +56,18 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Cursor\CursorManager.cs" />
     <Compile Include="Assets\Scripts\Health\HealthBar.cs" />
     <Compile Include="Assets\Scripts\SpriteAnimator.cs" />
     <Compile Include="Assets\Scripts\AttackManager.cs" />
     <Compile Include="Assets\Scripts\BattleHandler.cs" />
+    <Compile Include="Assets\Scripts\Cursor\CursorObject.cs" />
     <Compile Include="Assets\Scripts\LevelGenerator.cs" />
     <Compile Include="Assets\Scripts\Formation.cs" />
     <Compile Include="Assets\Scripts\Health\HealthSystem.cs" />
     <Compile Include="Assets\Scripts\RaycastEmitter.cs" />
     <Compile Include="Assets\Scripts\CharacterBattle.cs" />
-    <Compile Include="Assets\Scripts\Cursor\CursorManager.cs" />
-    <Compile Include="Assets\Scripts\Cursor\CursorObject.cs" />
+    <Compile Include="Assets\Scripts\Cursor\CursorAnimation.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

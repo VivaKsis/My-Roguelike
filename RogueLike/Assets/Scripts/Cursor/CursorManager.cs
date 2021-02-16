@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class CursorManager : MonoBehaviour
 {
-    //TODO delete singleton
-    public static CursorManager Instance { get; private set; }
-
     [SerializeField] private List<CursorAnimation> cursorAnimations;
 
     private CursorAnimation currentCursorAnimation;
@@ -17,11 +14,6 @@ public class CursorManager : MonoBehaviour
     {
         arrow, 
         attack
-    }
-
-    private void Awake()
-    {
-        Instance = this;
     }
 
     private CursorAnimation GetCursorAnimation (CursorType cursorType)
@@ -62,15 +54,5 @@ public class CursorManager : MonoBehaviour
             currentFrameIndex = (currentFrameIndex + 1) % frameCount;
             Cursor.SetCursor(currentCursorAnimation.textureFrames[currentFrameIndex], currentCursorAnimation.offset, CursorMode.Auto);
         }
-    }
-
-    //TODO make SO
-    [System.Serializable]
-    public class CursorAnimation
-    {
-        public CursorType cursorType;
-        public Texture2D[] textureFrames;
-        public float frameRate;
-        public Vector2 offset;
     }
 }
