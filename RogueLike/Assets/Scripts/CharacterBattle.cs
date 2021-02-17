@@ -7,8 +7,8 @@ public class CharacterBattle : MonoBehaviour
 {
     [SerializeField] private HealthSystem _healthSystem;
     public HealthSystem _HealthSystem => _healthSystem;
-    [SerializeField] private SpriteAnimator _spriteAnimator;
-    public SpriteAnimator _SpriteAnimator => _spriteAnimator;
+
+    [SerializeField] SpriteAnimator spriteAnimator;
 
     //TODO take from SO
     public int maxHealth, damage;
@@ -24,9 +24,9 @@ public class CharacterBattle : MonoBehaviour
     {
         Debug.Log("Hit " + target.name + " with " + damage);
         target._HealthSystem.TakeDamage(damage);
-        if (target.IsDead)
+        if (target.IsDead && target.spriteAnimator is EnemyAnimator enemyAnimator)
         {
-            target._spriteAnimator.CharacterState = SpriteAnimator.State.dead;
+            enemyAnimator.CharacterState = EnemyAnimator.State.dead;
         }
     }
 
@@ -37,18 +37,10 @@ public class CharacterBattle : MonoBehaviour
             onAttackComplete();
             return;
         }
-        if (_spriteAnimator != null)
-        {
-            _spriteAnimator.Attack(() =>
-            {
-                DealDamage(target);
-                onAttackComplete();
-            });
-        }
-        else
+        spriteAnimator.Attack(() =>
         {
             DealDamage(target);
             onAttackComplete();
-        }
+        });
     }
 }

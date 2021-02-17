@@ -50,7 +50,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _healthSystem: {fileID: 5374442981540553606}
-  _spriteAnimator: {fileID: 1393000291160036980}
+  spriteAnimator: {fileID: 1393000291160036980}
   maxHealth: 50
   damage: 10
 --- !u!114 &5374442981540553606
@@ -129,15 +129,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1532e24b20b43694295092affb28c28d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  idleFrame: {fileID: 21300000, guid: 608f6b5b0e417b644b3e9987ddc5c06b, type: 3}
-  deadFrame: {fileID: 21300000, guid: 7a795e72306efd546ac9089eb56b2a1f, type: 3}
   attackFrameArray:
   - {fileID: 21300000, guid: 608f6b5b0e417b644b3e9987ddc5c06b, type: 3}
   - {fileID: 21300000, guid: be9f48928f2e87940a91de7019b34f96, type: 3}
   - {fileID: 21300000, guid: ec10b5d3093e25548bc0d925384ffea8, type: 3}
   - {fileID: 21300000, guid: dc2972b98c631464fba555137cd10404, type: 3}
   - {fileID: 21300000, guid: 608f6b5b0e417b644b3e9987ddc5c06b, type: 3}
-  spriteRenderer: {fileID: 7309833982894021450}
+  frameRate: 0.5
+  idleFrame: {fileID: 21300000, guid: 608f6b5b0e417b644b3e9987ddc5c06b, type: 3}
+  deadFrame: {fileID: 21300000, guid: 7a795e72306efd546ac9089eb56b2a1f, type: 3}
   CharacterState: 0
 --- !u!114 &3915578467107219021
 MonoBehaviour:

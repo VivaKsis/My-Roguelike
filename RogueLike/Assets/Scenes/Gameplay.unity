@@ -505,6 +505,7 @@ GameObject:
   - component: {fileID: 754381574}
   - component: {fileID: 754381573}
   - component: {fileID: 754381572}
+  - component: {fileID: 754381575}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -538,7 +539,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _healthSystem: {fileID: 754381572}
-  _spriteAnimator: {fileID: 0}
+  spriteAnimator: {fileID: 754381575}
   maxHealth: 100
   damage: 20
 --- !u!4 &754381574
@@ -555,6 +556,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &754381575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 754381571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9422838da9a69074ea9f4ff624ab526f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackFrameArray:
+  - {fileID: 21300000, guid: 09cf1be7600f3924a939b9f98691463b, type: 3}
+  - {fileID: 21300000, guid: 66342bdc2cc854346bf22783eea776b1, type: 3}
+  - {fileID: 21300000, guid: 627c39997a4c4ad47a25be843471d852, type: 3}
+  - {fileID: 21300000, guid: 324cefaf3cce8d84fb00e896faec6276, type: 3}
+  frameRate: 0.2
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
