@@ -34,9 +34,10 @@ public class BattleHandler : MonoBehaviour
         /*for (int a = 0; a < enemyCharacters.Count; a++)
         {
             enemiesCharacterBattles.Add(SpawnCharacter(enemyCharacters[a]));
-        }*/
+        }
+        */
         enemiesCharacterBattles.Add(SpawnCharacter(new Vector3(-25, 0), enemyCharacters[0]));
-        //enemiesCharacterBattles.Add(SpawnCharacter(new Vector3(-5, 0), enemyCharacters[1]));
+        enemiesCharacterBattles.Add(SpawnCharacter(new Vector3(-5, 0), enemyCharacters[1]));
 
         SetActiveCharacterBattle(playerCharacterBattle);
         state = State.WaitingForPlayer;

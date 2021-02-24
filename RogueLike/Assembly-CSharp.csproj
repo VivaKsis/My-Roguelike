@@ -57,10 +57,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Cursor\CursorManager.cs" />
+    <Compile Include="Assets\Scripts\Animator\PlayerAnimator.cs" />
     <Compile Include="Assets\Scripts\Health\HealthBar.cs" />
     <Compile Include="Assets\Scripts\Animator\EnemyAnimator.cs" />
     <Compile Include="Assets\Scripts\AttackManager.cs" />
     <Compile Include="Assets\Scripts\BattleHandler.cs" />
+    <Compile Include="Assets\Scripts\Animator\SpriteAnimator.cs" />
     <Compile Include="Assets\Scripts\Cursor\CursorObject.cs" />
     <Compile Include="Assets\Scripts\LevelGenerator.cs" />
     <Compile Include="Assets\Scripts\Cursor\CursorAnimation.cs" />
@@ -68,8 +70,8 @@
     <Compile Include="Assets\Scripts\Health\HealthSystem.cs" />
     <Compile Include="Assets\Scripts\RaycastEmitter.cs" />
     <Compile Include="Assets\Scripts\CharacterBattle.cs" />
-    <Compile Include="Assets\Scripts\Animator\PlayerAnimator.cs" />
-    <Compile Include="Assets\Scripts\Animator\SpriteAnimator.cs" />
+    <Compile Include="Assets\Scripts\AudioManager.cs" />
+    <Compile Include="Assets\Scripts\CharacterSound.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

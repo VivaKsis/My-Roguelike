@@ -9,6 +9,7 @@ public class CharacterBattle : MonoBehaviour
     public HealthSystem _HealthSystem => _healthSystem;
 
     [SerializeField] SpriteAnimator spriteAnimator;
+    [SerializeField] CharacterSound characterSound;
 
     //TODO take from SO
     public int maxHealth, damage;
@@ -37,6 +38,7 @@ public class CharacterBattle : MonoBehaviour
             onAttackComplete();
             return;
         }
+        AudioManager.PlaySound(characterSound._AudioClip);
         spriteAnimator.Attack(() =>
         {
             DealDamage(target);

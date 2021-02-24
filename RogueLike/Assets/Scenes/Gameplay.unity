@@ -240,6 +240,7 @@ MonoBehaviour:
   playerCharacterBattle: {fileID: 754381573}
   enemyCharacters:
   - {fileID: 4368566410713132605, guid: 99e695a8a729ffd48b81cb2a15ddebdc, type: 3}
+  - {fileID: 364591647002932613, guid: 8309308032074684a845b1c64be69c39, type: 3}
   _raycastEmitter: {fileID: 963194229}
 --- !u!4 &478185150
 Transform:
@@ -506,6 +507,7 @@ GameObject:
   - component: {fileID: 754381573}
   - component: {fileID: 754381572}
   - component: {fileID: 754381575}
+  - component: {fileID: 754381576}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -540,6 +542,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _healthSystem: {fileID: 754381572}
   spriteAnimator: {fileID: 754381575}
+  characterSound: {fileID: 754381576}
   maxHealth: 100
   damage: 20
 --- !u!4 &754381574
@@ -574,6 +577,19 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 627c39997a4c4ad47a25be843471d852, type: 3}
   - {fileID: 21300000, guid: 324cefaf3cce8d84fb00e896faec6276, type: 3}
   frameRate: 0.2
+--- !u!114 &754381576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 754381571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3a0a8c23f6372b40b62852fdafc33e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audioClip: {fileID: 8300000, guid: ecb642c8078cb814fb9efb6b2b223cf6, type: 3}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
