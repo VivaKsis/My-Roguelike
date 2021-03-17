@@ -6,7 +6,7 @@ using UnityEngine;
 public abstract class SpriteAnimator : MonoBehaviour
 {
     [SerializeField] protected Sprite[] attackFrameArray;
-    [SerializeField] protected float frameRate;
+    [SerializeField] protected float frameRate = 0.4f;
 
     protected int currentFrameIndex;
     protected float timer;

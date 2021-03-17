@@ -9,40 +9,36 @@ public class CharacterBattle : MonoBehaviour
     public HealthSystem _HealthSystem => _healthSystem;
 
     [SerializeField] SpriteAnimator spriteAnimator;
-    [SerializeField] CharacterSound characterSound;
+    public SpriteAnimator _SpriteAnimator => spriteAnimator;
 
-    //TODO take from SO
-    public int maxHealth, damage;
+    [SerializeField] Character _character;
+    public Character _Character => _character;
+
+    [SerializeField] private GameObject selectionCircle;
 
     public bool IsDead => _healthSystem.IsDead;
 
     public void Start()
     {
-        _healthSystem.SetMaxHealth(maxHealth);
+        _healthSystem.SetMaxHealth(_character._MaxHealth);
+        HideSelectionCircle();
     }
 
-    public void DealDamage(CharacterBattle target)
+    public void DoMove(CharacterBattle target, Action onAttackComplete)
     {
-        Debug.Log("Hit " + target.name + " with " + damage);
-        target._HealthSystem.TakeDamage(damage);
-        if (target.IsDead && target.spriteAnimator is EnemyAnimator enemyAnimator)
-        {
-            enemyAnimator.CharacterState = EnemyAnimator.State.dead;
-        }
+        _character.NextCommand(_healthSystem.GetHealthPercent).Execute(this, target, onAttackComplete);
     }
 
-    public void Attack(CharacterBattle target, Action onAttackComplete)
+    public void ShowSelectionCircle()
     {
-        if (IsDead)
-        {
-            onAttackComplete();
+        if (selectionCircle == null)
             return;
-        }
-        AudioManager.PlaySound(characterSound._AudioClip);
-        spriteAnimator.Attack(() =>
-        {
-            DealDamage(target);
-            onAttackComplete();
-        });
+        selectionCircle.SetActive(true);
+    }
+    public void HideSelectionCircle()
+    {
+        if (selectionCircle == null)
+            return;
+        selectionCircle.SetActive(false);
     }
 }

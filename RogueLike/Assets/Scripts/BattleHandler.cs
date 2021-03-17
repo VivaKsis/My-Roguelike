@@ -45,7 +45,12 @@ public class BattleHandler : MonoBehaviour
 
     private void SetActiveCharacterBattle(CharacterBattle ñharacterBattle)
     {
+        if(activeCharacterBattle != null)
+        {
+            activeCharacterBattle.HideSelectionCircle();
+        }
         activeCharacterBattle = ñharacterBattle;
+        activeCharacterBattle.ShowSelectionCircle();
     }
 
     private bool IsBattleOver()
@@ -72,7 +77,7 @@ public class BattleHandler : MonoBehaviour
     {
         SetActiveCharacterBattle(enemiesCharacterBattles[activeEnemyIndex]);
 
-        enemiesCharacterBattles[activeEnemyIndex].Attack(playerCharacterBattle, onAttackComplete: () =>
+        enemiesCharacterBattles[activeEnemyIndex].DoMove(playerCharacterBattle, onAttackComplete: () =>
         {
             activeEnemyIndex++;
             if(activeEnemyIndex == enemiesCharacterBattles.Count)
@@ -121,7 +126,7 @@ public class BattleHandler : MonoBehaviour
                     if (targetCharacterBattle && targetCharacterBattle != playerCharacterBattle)
                     {
                         state = State.Busy;
-                        playerCharacterBattle.Attack(targetCharacterBattle, () =>
+                        playerCharacterBattle.DoMove(targetCharacterBattle, () =>
                         {
                             ChooseNextActiveCharacterBattle();
                         });
